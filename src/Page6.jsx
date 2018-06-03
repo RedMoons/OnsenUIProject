@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 import {Page, Button, Toolbar, BackButton} from 'react-onsenui';
 import {notification} from 'onsenui';
 
-import Page3 from './Page3.jsx';
+import Page7 from './Page7.jsx';
 
-export default class Page2 extends React.Component {
+export default class Page6 extends React.Component {
   alertPopup() {
     notification.alert('This is an Onsen UI alert notification test.');
   }
   pushPage(){
-	this.props.navigator.pushPage({component: Page3});	
+	this.props.navigator.pushPage({component: Page7}); 
   }
+
   goback() {
     this.props.navigator.popPage();
   }
@@ -29,11 +30,11 @@ export default class Page2 extends React.Component {
   render() {
     return (
       <Page renderToolbar={this.renderToolbar}>
-	<h3>This is Page2</h3>
-        <div>Page2 called!</div>
+	<h3>This is Page6</h3>
+        <div>Page6 called!</div>
         <Button onClick={this.alertPopup}>Click Me!</Button>
-        <Button onClick={this.pushPage.bind(this)}>Next page!</Button>
-	<Button onClick={this.goback.bind(this)}>Go Back</Button>
+	<Button onClick={this.pushPage.bind(this)}>Next page!</Button> 
+        <Button onClick={this.goback.bind(this)}>Go Back</Button>
       </Page>
     );
   }
